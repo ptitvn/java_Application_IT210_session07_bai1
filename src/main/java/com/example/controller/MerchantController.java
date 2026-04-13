@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MerchantController {
 
-    // Trang mặc định khi vào localhost:8080/demo/
     @GetMapping("/")
     public String home(RestaurantProfile profile) {
-        return "profile"; // mở form profile.html
+        return "profile";
     }
 
     // Trang hiển thị form cập nhật
@@ -28,6 +27,6 @@ public class MerchantController {
         System.out.println("Active: " + profile.isActive());
 
         // TODO: gọi service lưu DB
-        return "success"; // trả về success.html
+        return "success";
     }
 }
